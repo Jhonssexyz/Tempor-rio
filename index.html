@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contos de Ypá</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://unpkg.com/mqtt/dist/mqtt.min.js"></script>
+</head>
+<body>
+  <div class="background-overlay"></div>
+
+  <header>
+    <h1>Contos de Ypá</h1>
+    <nav>
+      <ul>
+        <li><a href="personagens.html">Personagens</a></li>
+        <li><a href="#temporizador">Temporizador</a></li>
+        <li><a href="#resumoRodada">Ficha</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="painel">
+      <h2>Adicionar Personagem</h2>
+      <input type="text" id="novoNome" placeholder="Nome do personagem" />
+      <input type="number" id="novaVida" placeholder="Vida (0-30)" min="0" max="30" />
+      <button onclick="adicionarPersonagem()" aria-label="Adicionar personagem">Adicionar</button>
+    </section>
+
+    <section id="personagemContainer" class="painel">
+      <!-- Personagens serão renderizados aqui -->
+    </section>
+
+    <section id="temporizador" class="painel">
+      <h2>Temporizador</h2>
+      <label for="tempoMinutos">Minutos:</label>
+      <input type="number" id="tempoMinutos" min="0" placeholder="Minutos" />
+      <label for="tempoSegundos">Segundos:</label>
+      <input type="number" id="tempoSegundos" min="0" max="59" placeholder="Segundos" />
+      <button onclick="startTimer()" aria-label="Iniciar temporizador">Iniciar</button>
+      <button onclick="resetTimer()" aria-label="Resetar temporizador">Resetar</button>
+      <div id="timer">00:00</div>
+    </section>
+
+    <section id="resumoRodada" class="painel">
+      <h2>Ficha da Rodada</h2>
+    </section>
+  </main>
+
+  <!-- Carregamento do script.js -->
+  <script src="script.js"></script>
+</body>
+</html>
