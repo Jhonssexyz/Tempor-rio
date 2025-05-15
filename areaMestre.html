@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h2>CONTOS DE YPÁ</h2>
+    </header>
+    <div class="container">
+        <!-- Caixa para adicionar personagens -->
+        <div class="box" id="add-personagem">
+            <h2>Adicionar Personagem</h2>
+            <form id="form-personagem">
+                <label for="nome-personagem">Nome:</label>
+                <input type="text" id="nome-personagem" name="nome-personagem" required>
+                <br>
+                <label for="vida-personagem">Vida:</label>
+                <input type="number" id="vida-personagem" name="vida-personagem" required>
+                <br>
+                <button type="submit">Adicionar</button>
+            </form>
+        </div>
+
+        <!-- Lista de personagens -->
+        <div class="box" id="lista-personagens">
+            <h2>Lista de Personagens</h2>
+            <ul id="personagens"></ul>
+        </div>
+
+        <!-- Temporizador -->
+        <div class="box" id="temporizador">
+            <h2>Temporizador</h2>
+            <label for="tempo-input">Definir Tempo (em minutos):</label>
+            <input type="number" id="tempo-input" min="1" placeholder="Ex: 5">
+            <p id="timer">00:00</p>
+            <button id="start-timer">Iniciar</button>
+            <button id="reset-timer">Resetar</button>
+        </div>
+
+        <!-- Ficha da rodada -->
+        <div class="box" id="ficha-rodada">
+            <h2>Ficha da Rodada</h2>
+            <button id="set-iniciativa">Definir Ordem de Iniciativa</button>
+            <ul id="ordem-iniciativa"></ul>
+        </div>
+    </div>
+</body>
+</html>

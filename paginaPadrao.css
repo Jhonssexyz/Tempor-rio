@@ -1,0 +1,70 @@
+/* Estilo do menu */
+
+body{
+    height: 100vh;
+    margin: 0, 0, 0, 0;
+    display: flex; /* Ativa o flexbox */
+    flex-direction: column; /* Organiza os elementos em coluna */
+    align-items: start; /* Centraliza horizontalmente */
+    justify-content: flex-start; /* Remove a centralização vertical */
+    background-image: -webkit-linear-gradient(to left, #1C3B2A, #3B261A);
+    background-image: -moz-linear-gradient(to left, #1C3B2A, #3B261A);
+    background-image: -o-linear-gradient(to left, #1C3B2A, #3B261A);
+    background-image: linear-gradient(to left, #1C3B2A, #3B261A);
+}
+
+.menu {
+    position: relative;
+    background-color: #3B261A;
+    color: aliceblue;
+    padding: 10px 20px; /* Espaçamento interno do menu */
+}
+
+.menu-toggle {
+    font-size: 24px;
+    cursor: pointer;
+    display: block; /* O botão hambúrguer sempre aparece */
+}
+
+.menu-items {
+    list-style: none;
+    padding: 10px 20px; /* Adiciona espaçamento interno para os itens */
+    margin: 0;
+    display: flex; /* Mantém o flexbox ativo */
+    flex-direction: column; /* Alinha os itens verticalmente */
+    background-color: #3B261A;
+    position: absolute;
+    top: 50px;
+    left: 0;
+    width: calc(100% - 40px); /* Reduz a largura para criar espaço nas laterais */
+    border-radius: 10px; /* Adiciona bordas arredondadas */
+    box-sizing: border-box; /* Garante que o padding não afete a largura total */
+    opacity: 0; /* Torna o menu invisível inicialmente */
+    transform: scaleY(0); /* Colapsa o menu verticalmente */
+    transform-origin: top; /* Define o ponto de origem da transformação */
+    transition: all 0.3s ease-in-out; /* Adiciona a transição suave */
+    pointer-events: none; /* Impede cliques quando o menu está escondido */
+}
+
+.menu-items li {
+    margin: 10px 0; /* Adiciona espaçamento entre os itens */
+}
+
+.menu-items li a {
+    text-decoration: none;
+    color: aliceblue;
+    padding: 10px; /* Adiciona espaçamento interno aos links */
+    display: block; /* Garante que os links ocupem toda a largura disponível */
+    border-radius: 5px; /* Bordas arredondadas nos links */
+}
+
+.menu-items li a:hover {
+    background-color: #5C3A2A; /* Cor de fundo ao passar o mouse */
+}
+
+/* Estilo para quando o menu está ativo */
+.menu-items.active {
+    opacity: 1; /* Torna o menu visível */
+    transform: scaleY(1); /* Expande o menu verticalmente */
+    pointer-events: auto; /* Permite cliques quando o menu está visível */
+}

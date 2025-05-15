@@ -1,135 +1,118 @@
-/* Estilo moderno e místico */
-@import url('https://fonts.googleapis.com/css2?family=MedievalSharp&display=swap');
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+@font-face {
+    font-family: 'MinhaFonte';
+    src: url('MinhaFontes/Amazonica_Juan_Casco.ttf') format('truetype');
 }
 
 body {
-  font-family: 'MedievalSharp', cursive;
-  background: linear-gradient(135deg, #1b0c2a, #2c1a40);
-  color: #f4f4f4;
-  position: relative;
-  z-index: 1;
+    height: 100vh;
+    margin: 0;
+    display: flex; /* Ativa o flexbox */
+    flex-direction: column; /* Organiza os elementos em coluna */
+    align-items: center; /* Centraliza horizontalmente */
+    justify-content: flex-start; /* Remove a centralização vertical */
+    background-image: -webkit-linear-gradient(to left, #1C3B2A, #3B261A);
+    background-image: -moz-linear-gradient(to left, #1C3B2A, #3B261A);
+    background-image: -o-linear-gradient(to left, #1C3B2A, #3B261A);
+    background-image: linear-gradient(to left, #1C3B2A, #3B261A);
 }
-
-.background-overlay {
-  position: fixed;
-  inset: 0;
-  background: url('https://www.transparenttextures.com/patterns/stardust.png');
-  opacity: 0.06;
-  z-index: 0;
+h1, h2{
+    color: aliceblue;
+    font-family: 'MinhaFonte';
 }
-
+h2 {
+    margin-bottom: 10px; /* Reduz o espaço abaixo do h2 */
+}
+p{
+    color: aliceblue;
+    margin-top: 5px; /* Reduz o espaço acima do p */
+}
 header {
-  text-align: center;
-  padding: 2rem 1rem;
-  background: radial-gradient(circle, #3b245a 0%, #1f0f33 100%);
-  border-bottom: 3px solid #d4af37;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.3);
-  z-index: 2;
-  position: relative;
+    background-image: linear-gradient(to right, #1C3B2A, #3B261A);
+    border-radius: 15px;
+    font-size: xx-large;
+    width: calc(100% - 40px); /* Reduz a largura total para criar espaço nas laterais */
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 20px; /* Espaçamento interno */
+    position: relative; /* Permite que o header fique no fluxo normal */
+    margin: 20px 20px 20px 20px; /* Adiciona margem externa: 20px nas laterais e abaixo */
+    box-sizing: border-box; /* Garante que o padding não afete a largura total */
 }
 
-header h1 {
-  font-size: 3.5rem;
-  color: #ffd700;
-  text-shadow: 3px 3px 5px rgba(0,0,0,0.8);
-  margin-bottom: 1rem;
+header a {
+    text-decoration: none;
+    color: aliceblue;
 }
 
-nav ul {
-  list-style: none;
-  display: flex;
-  justify-content: center;
-  gap: 2.5rem;
-  padding: 0;
+.right-links {
+    margin-left: auto; /* Empurra o grupo de links para a direita */
+    display: flex; /* Garante que os links fiquem lado a lado */
+    gap: 10px; /* Adiciona espaço entre os links */
 }
 
-nav a {
-  text-decoration: none;
-  color: #f0e6ff;
-  font-weight: bold;
-  font-size: 1.1rem;
-  transition: color 0.3s ease;
+.login {
+    width: 300px;
+    padding: 20px;
+    background-color: #1C3B2A; /* Cor de fundo */
+    color: aliceblue; /* Cor do texto */
+    border-radius: 10px; /* Bordas arredondadas */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra */
+    text-align: center; /* Centraliza o texto */
+    position: absolute; /* Posiciona a div em relação ao body */
+    top: 50%; /* Centraliza verticalmente */
+    left: 50%; /* Centraliza horizontalmente */
+    transform: translate(-50%, -50%); /* Ajusta o ponto de referência para o centro */
 }
 
-nav a:hover {
-  color: #ffd700;
+.login input {
+    width: 90%;
+    padding: 10px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 5px;
 }
 
-main {
-  padding: 2rem;
-  display: grid;
-  gap: 2rem;
-  max-width: 1000px;
-  margin: auto;
-  position: relative;
-  z-index: 2;
+.login button {
+    padding: 10px 20px;
+    background-color: #3B261A;
+    color: aliceblue;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
 }
 
-.painel {
-  background: rgba(60, 40, 80, 0.85);
-  border: 2px solid #6b4ea0;
-  border-radius: 20px;
-  padding: 2rem;
-  box-shadow: 0 0 25px rgba(0,0,0,0.5);
+.login button:hover {
+    background-color: #5C3A2A;
 }
 
-#timer {
-  font-size: 3rem;
-  font-weight: bold;
-  margin: 1rem 0;
-  text-align: center;
+.container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    padding: 20px;
 }
 
-.botoes {
-  display: flex;
-  justify-content: center;
-  gap: 1rem;
+.box {
+    background-color: #1C3B2A;
+    color: aliceblue;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-button {
-  background: #ffd700;
-  color: #1b0c2a;
-  border: none;
-  padding: 0.7rem 1.5rem;
-  font-size: 1rem;
-  border-radius: 12px;
-  font-weight: bold;
-  cursor: pointer;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
-  transition: all 0.3s ease;
+.box h2 {
+    margin-top: 0;
 }
 
-button:hover {
-  background: #e6c200;
-  transform: scale(1.05);
+ul {
+    list-style: none;
+    padding: 0;
 }
 
-.personagem {
-  border-radius: 16px;
-  padding: 1rem;
-  margin-bottom: 1.5rem;
-  transition: transform 0.2s ease;
-  color: #fff;
-  text-shadow: 1px 1px 2px #000;
-}
-
-.personagem:hover {
-  transform: scale(1.02);
-}
-
-.vida-verde {
-  background-color: #2e7d32cc;
-}
-
-.vida-amarelo {
-  background-color: #fbc02dcc;
-}
-
-.vida-vermelho {
-  background-color: #c62828cc;
+ul li {
+    margin: 5px 0;
+    padding: 5px;
+    background-color: #3B261A;
+    border-radius: 5px;
+    color: aliceblue;
 }
